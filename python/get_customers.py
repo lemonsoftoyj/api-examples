@@ -62,7 +62,7 @@ def lemonsoft_get_customers(session_id):
         response = requests.get(url, headers=headers)
 
         if response.status_code != 200:
-            break
+            raise Exception(f"Failed to fetch customers: HTTP {response.status_code}")
 
         r = response.json()
         if r['result_count'] == 0:
@@ -77,11 +77,10 @@ if __name__ == "__main__":
     session_id = login_lemonsoft()
     if session_id:
         print(f"Login successful. Session ID: {session_id}")
+        customers = lemonsoft_get_customers(session_id)
+        print(customers)
     else:
         print("Login failed.")
-
-    customers = lemonsoft_get_customers(session_id)
-    print(customers)
 
     
     
