@@ -41,3 +41,21 @@ The script will print the session ID if the login is successful, and then it wil
 
 Please note that this README assumes you have PHP and Composer installed on your machine. If you don't, you can download PHP from [php.net](https://www.php.net/downloads) and Composer from [getcomposer.org](https://getcomposer.org/download/).
 
+
+## Kellokortti Example
+
+`get_person_kellokortti.php` shows how to read a person from the Kellokortti API.
+Set these environment variables before running:
+
+```
+KK_API_URL=https://api.kellokortti.fi/api
+KK_USERNAME=your_username
+KK_PASSWORD=your_password
+KK_PERSON_ID=identifier    # optional
+```
+
+Run:
+
+```bash
+php get_person_kellokortti.php
+```

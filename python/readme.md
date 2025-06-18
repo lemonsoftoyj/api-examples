@@ -28,3 +28,20 @@ You can set these variables in your shell, or you can use a `.env` file if you'r
 To run the script, navigate to the project directory in your terminal and run `python get_customers.py`.
 
 The script will print the session ID if the login is successful, and then it will print the list of customers.
+
+## Kellokortti Example
+
+The `get_person_kellokortti.py` script demonstrates how to fetch a person from the Kellokortti API using HTTP Basic authentication.
+
+Set the following environment variables:
+
+- `KK_API_URL` (defaults to `https://api.kellokortti.fi/api` if not set)
+- `KK_USERNAME`
+- `KK_PASSWORD`
+- `KK_PERSON_ID` (optional, ID of the person to fetch)
+
+Run the script with:
+
+```bash
+python get_person_kellokortti.py
+```

@@ -41,3 +41,18 @@ The `CreateCustomerUrl` method creates the URL for fetching customers.
 The `ApiResponse` class represents the API response.
 
 The `Program` class contains the `Main` method, which creates a new `LemonsoftClient`, logs into the Lemonsoft system, and fetches all customers from the system.
+
+## Kellokortti Example
+
+The `get_person_kellokortti.cs` file demonstrates using Basic authentication with the Kellokortti API. Set these environment variables:
+
+- `KK_API_URL` (defaults to `https://api.kellokortti.fi/api`)
+- `KK_USERNAME`
+- `KK_PASSWORD`
+- `KK_PERSON_ID` (optional)
+
+Compile and run:
+
+```bash
+dotnet run get_person_kellokortti.cs
+```
